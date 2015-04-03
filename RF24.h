@@ -832,6 +832,13 @@ public:
    */
   void openWritingPipe(uint64_t address);
 
+  /**
+   * Retrieve the current status of the chip
+   *
+   * @return Current value of status register
+   */
+  uint8_t get_status(void);
+
 private:
 
   /**
@@ -928,13 +935,6 @@ private:
    * @return Current value of status register
    */
   uint8_t flush_rx(void);
-
-  /**
-   * Retrieve the current status of the chip
-   *
-   * @return Current value of status register
-   */
-  uint8_t get_status(void);
 
   #if !defined (MINIMAL)
   /**
